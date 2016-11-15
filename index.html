@@ -1,0 +1,327 @@
+<!--Ori Amir 305399420 ,Matan Antebi 303093587 ,Nevo Sayag 200484426 -->
+
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+    
+  <head>
+        <title>The Wedding Planner</title>
+      
+        <!--Import all css needed -->
+        <link href="css/genrelDesign.css" rel="stylesheet" />
+        <link href="css/primaryPage.css" rel="stylesheet" />
+        <link href="css/newWeddingPage.css" rel="stylesheet" />
+        <link href="css/editWeddingPage.css" rel="stylesheet" />
+        <link href="css/guestsPage.css" rel="stylesheet" />
+        <link href="css/supPage.css" rel="stylesheet" />
+        <link rel="stylesheet" type="text/css" href="css/sweetalert.css">
+
+        <!--Import Fonts -->
+        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Tangerine">
+        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Sniglet">
+        <link href='https://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>  
+        <link href='https://fonts.googleapis.com/css?family=Poiret+One|Fredericka+the+Great' rel='stylesheet' type='text/css'>
+      
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+        
+        <!-- import scripts and load the main script -->
+        <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.3.min.js"></script>
+        <script type = "text/javascript" src = "wed.js"></script>
+        <script src="sweetalert.min.js"></script> 
+       
+        <script>$(document).ready(loadPage); </script>
+
+  </head>
+    
+    <body>
+        <!-- container -->
+        <div class="container">
+            <!-- nav bar,uses boostrap and logo -->
+            <header class="row">
+                <div class="col-md-5">
+                    <a href="#" id="logo"><img src="pic/logo.png" alt="logo"></a>
+                </div>
+                <div class="col-md-7">
+                    <nav>
+                        <a href="#" id="cmdNew">New</a>
+                        <a href="#" id="cmdPrimary">Primary</a>
+                        <a href="#" id="cmdGuests">Guests</a>
+                        <a href="#" id="cmdSup">Suppliers</a>
+                    </nav>
+                </div>
+            </header>
+            
+			
+            <!-- 1-start*************screen of the new weeding add *************-->
+            
+            <!-- create 3 div class(tblNewWedding,couplePic,buttonStart) for section the page--->    
+           <div class=newWeddingDiv id="newWeddingDiv"> 
+                <div class="row">
+                    <div class="col-md-6 col-md-offset-1">
+                        <table class='text-right'><!-- table for the form to add a new couple-->
+                          <tr>
+                            <td>Groom:</td>
+                            <td><input type="text" class="inputs" id="manId" ></td>
+                          </tr>
+                          <tr>
+                            <td>Bride:</td>
+                            <td><input type="text" class="inputs" id="womanId" ></td> 
+                          </tr>
+                          <tr>
+                            <td>Wedding date:</td>
+                            <td><input type="date" class="inputs" id="weddingDate" ></td>
+                            </tr>
+                            <tr>
+                            <td>Location:</td>
+                            <td><input type="text" class="inputs" id="locationId"></td>
+                          </tr>
+                        </table>
+                        <div class=buttonStartNewWedding><button class="btn btn-default btn-lg" type="submit" id = "cmdAddNewWed">Lets start!</button></div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class=couplePic> <img src="pic/newWedPic.png" height=300 width=280></div>
+                    </div>
+                </div> 
+            </div>
+            
+            <!-- 1-end*************END of scrren new wedding add *************-->    
+
+            
+
+            
+             <!-- 2-start*************screen of updateWedding details *************-->
+
+            <div class=editWeedingDiv id="editWeedingDiv"> 
+                
+                <div class="row">
+                    <div class="col-md-6 col-md-offset-1">
+                        <table class='text-right' id="tblEditCoupleDeatils"><!-- table for the form to add a new couple-->
+                            <tr>
+                              <td>Groom:</td>
+                              <td><input type="text" class="inputs" id="manIdUpdate" ></td>
+                            </tr>
+
+                            <tr>
+                              <td>Bride:</td>
+                              <td><input type="text" class="inputs" id="womanIdUpdate" ></td>
+                            </tr>
+
+                            <tr>
+                              <td>Wedding date:</td>
+                              <td><input type="date" class="inputs" id="weddingDateUpdate" ></td>
+                            </tr>
+
+                            <tr>
+                              <td>Location:</td>
+                              <td><input type="text" class="inputs" id="locationIdUpdate"></td>
+                            </tr>      
+                        </table>
+                        <div class="text-right">
+                            <button type="submit"  class="btn btn-primary btn-lg" id = "cmdUpdateCouple">Upadte</button>
+                            <button type="submit"  class="btn btn-warning btn-lg" id = "createNewCouple">Create new wedding</button>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class=editPic> <img src="pic/editWedPic.png" height=400 width=300></div>
+                    </div>
+                </div> 
+          </div> 
+            
+         <!-- 2-end*************END of screen of updateWedding details *************-->
+
+            
+        
+         
+        <!-- 3-start-****************screen of Primary page  ************************-->
+              
+            <div class=primaryDiv id="primaryDiv">
+            
+                <div class="row">
+                    <div class="col-md-5">
+                        <!-- class for the labels- take the names of couple and additional details about the wedding and initliaze them in the js-->
+                        <div class=primaryPic id="primaryPic"> <img src="pic/primaryPic.png" height=150 width=190></div>
+
+                        <div class=titles id="titles">
+                            <h3 id="coupleLabel"></h3>
+                            <h3 id="dateLabel"></h3>
+                            <h3 id="locLabel"></h3>
+                            <h3 id="remainLabel"></h3>
+                            <h3 id="remainMissionLabel"></h3>
+                        </div>
+
+                        <button id = "cmdAddMission" class="btn btn-primary btn-lg">Add Mission!</button>
+                    </div>
+                    <div class="col-md-7">
+                        <!-- Table for the primary page,generl missions for thw wedding-->
+                       <table class='table table-hover' id='missionTbl'>
+                           <thead>
+                               <tr>
+                                <th>#</th>
+                                <th>Mission</th>
+                                <th>is complete</th> 
+                                <th>delete</th> 
+                              </tr>
+                           </thead>
+                       </table>
+                    </div>
+                </div>
+               
+          </div>
+    
+         <!-- 3-end-****************END of screen of Primary page  ************************-->
+
+            
+            
+            
+    
+            
+         <!-- 4-start-****************  screen of Guests page  ***************************-->
+
+             <div class=guestDiv id="guestDiv"> 
+                <div class=guestsPic><img src="pic/guestPic.png" height=400px ; width= 340px;/> </div>
+
+                 <div class=guestsLbls> <!--class for organize the screen-->
+                        <!--inputs box with label for the space between them-->
+                       <label for="guestName"> Name: <input type="text"  class="smallInputs" id="guestName" ></label>
+                       <label for="numOfGuest"> Amount: <input type="text"  class="smallInputs" id="numOfGuest" ></label>
+                       <label id="marginLabel"> <button id = "cmdAddGuest" class="btn btn-primary">ADD</button></label>
+                </div>
+                <label for="searchGuest"> Search: <input type="text"  class="smallInputs" id="searchGuest" ></label>
+             <!--class for the gray background to the Guests table-->
+                <div class="jumbotron jumbotron-fluid">
+                    <div class=guestsTblDiv>
+                       <table class="table table-hover" id="guestsTbl">
+                            <tr>
+                               <td>#</td>
+                               <td>Name</td>
+                                <td>Amount</td> 
+                                <td>Confirm</td> 
+                                <td>Delete</td> 
+                            </tr>
+                        </table>
+                    </div>
+                 </div>
+              </div>
+            
+        <!-- 4-end -****************  screen of Guests page  ***************************-->
+
+            
+            
+        <!-- 5-start -****************  screen of Supllires page  ***************************-->
+             <div class=supDiv id="supDiv">
+                <label for="mySelect">
+                    Expenditure for: 
+                    <!-- select for all  the sup*-->
+                    <select id="mySelect" class="smallInputs">
+                        <option>DJ</option>
+                        <option>Photographer</option>
+                        <option>video photographer</option>
+                        <option>hall/garden</option>
+                        <option>Alcohol</option>
+                        <option>Design</option>
+                        <option>Shuttle</option>
+                        <option>Makeup</option>
+                        <option>Hair design</option>
+                        <option>Magnets</option>
+                        <option>Rabbi</option>
+                    </select>
+                </label>
+
+                <!-- inputBox for all  the sup-->
+                <label for="supName">
+                    Supplier name: 
+                    <!-- select for all  the sup*-->
+                    <input type="text" class="smallInputs" id="supName">
+                </label>
+                <label for="supName">
+                    Amount: 
+                    <input type="text" class="smallInputs" id="amount">
+                </label>
+                <label for="supName">
+                    Paid: 
+                    <input type="text" class="smallInputs" id="paid">
+                </label>
+                <label id="marginLabel"><button type="submit" class="btn btn-primary" id = "cmdAddSup">ADD sup</button></label>
+                <div class=supPic> <img src="pic/supPic.png" height=417 width=257></div>
+                 <!-- div class for the gray background of sup table-->
+                <div class="jumbotron jumbotron-fluid">
+                    <div class=supsTbl id="supsTbl">
+                        <table class="table table-hover" id="supTbl">
+                             <tr>
+                                <td>#</td>
+                                <td>Expenditure for</td>
+                                <td>Supplier name</td> 
+                                <td>Amount</td> 
+                                <td>Paid</td> 
+                                <td>Remaining</td> 
+                                <td></td> 
+                            </tr>
+                            <tr>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            
+            
+           <!-- 5-end -****************  END screen of sup  page  ***************************-->
+
+            
+            
+        
+            
+           <!-- 6-start -**************** screen of  the UpdateSup  page  ***************************-->
+          
+           <!-- div popUpSup put black bakground and updateSupDiv div upload the update form -->
+          <div class=popUpSup id="popUpSup">
+
+              <div class=updateSupDiv id="updateSupDiv">
+                 <!-- put the close button in right of form page -->
+                  <div class=close><button id = "closePopUp" class="btn btn-default btn-lg">Close</button></div>
+                  
+                  <!-- updateForm div make the form design -->
+                  <div class=updateTitle id="updateForm">Update supplier</div> <br><br>
+                  
+                 <!-- Table for the updateSup page -->
+                  <table class='paddingBetweenRows' class="smallInputs" id="tblUpdateSup">
+                        <tr>
+                          <td>Supplier name	</td>
+                        <td><input type="text" class="smallInputs" id="supplierNameUpdate" ></td>
+                        </tr>
+                      
+                        <tr>
+                            <td>Amount:</td>
+                            <td><input type="text" class="smallInputs" id="amountUpdate" ></td>
+                        </tr>
+
+                        <tr>
+                            <td>Paid</td>
+                            <td><input type="text"  class="smallInputs" id="paidUpdate" ></td>
+                        </tr>
+
+                         <tr>  
+                             <td><label id="whiteLabel">dd</label></td>
+                            <td></td>
+                        </tr>
+
+                        <tr>  
+                            <td></td>
+                            <td></td>
+                        </tr>
+                 </table>  
+                 <br><br>
+            </div>       
+          </div>
+
+
+            
+            <!-- 6-end -**************** END of screen the UpdateSup  page  ***************************-->
+            <div class="clearfix"></div>
+            <footer>By Ori Amir  & Matan Antebi & Nevo Sayag</footer>
+        </div>
+        <!-- end container  -->
+   	    	   
+   </body>
+</html>

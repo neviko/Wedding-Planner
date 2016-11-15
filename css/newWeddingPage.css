@@ -1,0 +1,23 @@
+/*Ori Amir 305399420 ,Matan Antebi 303093587 ,Nevo Sayag 200484426 */
+
+
+/*Design of the new wedding page */
+.newWeddingDiv
+{
+    font-family: 'Tangerine',serif;
+    font-size: 60px;
+    text-shadow: 4px 4px 4px #aaa;
+    display: none;
+}
+
+/*Design of the  pic new wedding page */
+.couplePic {
+    margin-top: 44px;
+}
+/*Design of the the button of the  new wedding page */
+.buttonStartNewWedding
+{
+    text-align: right;
+    font-family: 'Sniglet';
+}
+

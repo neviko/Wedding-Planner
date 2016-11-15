@@ -1,0 +1,11 @@
+/*Ori Amir 305399420 ,Matan Antebi 303093587 ,Nevo Sayag 200484426 */
+
+/*Design of the page of edit wedding info page */
+.editWeedingDiv
+{
+    font-family: 'Tangerine',serif;
+    font-size: 60px;
+    text-shadow: 4px 4px 4px #aaa;
+    display: none;
+}
+
